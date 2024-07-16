@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-title class="ion-text-center custom_form">Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="ion-padding">
+    <form (ngSubmit)="signup()" [formGroup]="signupForm">
+      <div class="input_wrap">
+        <ion-input type="text" placeholder="Full Name" formControlName="name" [counter]="true"  maxlength="20"></ion-input>
+      </div>
+
+      <div class="input_wrap">
+        <input type="email" placeholder="E-Mail" formControlName="email">
+      </div>
+
+      <div class="input_wrap">
+        <ion-datetime presentation="month-year" formControlName="DOB"></ion-datetime>
+      </div>
+
+
+
+
+
+      <div class="input_wrap">
+        <input type="password" placeholder="Password" formControlName="password">
+      </div>
+
+      <ion-input type="password" label="Password">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+
+      <ion-button fill="solid" type="submit">Sign In</ion-button>
+    </form>
+  </div>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <p class="ion-text-center custom_form">Already have an Account? <a href="/form">Sign In</a> </p>
+  </ion-toolbar>
+</ion-footer>
+
+

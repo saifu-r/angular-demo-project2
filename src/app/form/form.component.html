@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-title class="ion-text-center custom_form">Sign In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="ion-padding">
+    <form (ngSubmit)="signin()" [formGroup]="signinForm">
+      <div class="input_wrap">
+        <input type="email" placeholder="E-mail" formControlName="email">
+      </div>
+
+      <div class="input_wrap">
+        <input type="password" placeholder="Password" formControlName="password">
+      </div>
+
+      <ion-button fill="solid" type="submit">Sign In</ion-button>
+    </form>
+  </div>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <p class="ion-text-center custom_form">Create An Account? <a routerLink="/signup">Sign In</a> </p>
+  </ion-toolbar>
+</ion-footer>
+
